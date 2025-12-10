@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:${user.home}/.warehouse/warehouse.db
+    driver-class-name: org.sqlite.JDBC
+
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.jdbc.use_get_generated_keys: false
+      hibernate.jdbc.batch_size: 0
+
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.warehouse: DEBUG
+    org.springframework.security: DEBUG
