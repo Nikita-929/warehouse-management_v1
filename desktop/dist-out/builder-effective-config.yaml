@@ -1,0 +1,16 @@
+directories:
+  output: dist-out
+  buildResources: build
+appId: com.warehouse.desktop
+productName: Warehouse Management
+files:
+  - filter:
+      - package.json
+      - src/**
+extraResources:
+  - from: ../backend/target/warehouse-management-1.0.0.jar
+    to: backend/warehouse-management-1.0.0.jar
+win:
+  target:
+    - nsis
+electronVersion: 29.4.6

@@ -1,0 +1,13 @@
+appId: com.warehouse.desktop
+productName: Warehouse Management
+directories:
+  output: dist-out
+files:
+  - package.json
+  - src/**
+extraResources:
+  - from: ../backend/target/warehouse-management-1.0.0.jar
+    to: backend/warehouse-management-1.0.0.jar
+win:
+  target:
+    - nsis

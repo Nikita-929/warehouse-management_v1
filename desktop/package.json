@@ -1,0 +1,19 @@
+{
+  "name": "warehouse-desktop",
+  "version": "1.0.0",
+  "description": "Electron desktop shell for Warehouse Management System",
+  "main": "src/main.js",
+  "author": "Nikita Mahato",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env ELECTRON_DEV=1 electron .",
+    "pack": "electron-builder --win --x64",
+    "build-backend": "cd ../backend && mvn clean package -DskipTests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^29.0.0",
+    "electron-builder": "^24.6.4"
+  }
+}
